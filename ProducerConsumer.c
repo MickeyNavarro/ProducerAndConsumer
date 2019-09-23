@@ -12,8 +12,13 @@
 
 //Resources: https://www.geeksforgeeks.org/multithreading-c-2/
 //           https://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_join.html
-//         https://stackoverflow.com/questions/31082559/warning-passing-argument-1-of-pthread-join-makes-integer-from-pointer-without
+//           https://stackoverflow.com/questions/31082559/warning-passing-argument-1-of-pthread-join-makes-integer-from-pointer-without
 //           https://timmurphy.org/2010/05/04/pthreads-in-c-a-minimal-working-example/
+
+
+//define buffer
+#define BUFFER 10
+int buffer[BUFFER];
 
 //define methods
 int produce();
@@ -73,7 +78,7 @@ int get() {
 //main method will be used to manage the processes and threads
 void main() {
     //define 2 threads through the use of an array
-        //side note: when creating multiple threads, put them into an array when declaring them; defining each thread with its own ID will cause errors
+    //side note: when creating multiple threads, put them into an array when declaring them; defining each thread with its own ID will cause errors
     pthread_t threads[2];
     
     //create threads for each the producer and consumer
