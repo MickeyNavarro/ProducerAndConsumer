@@ -8,7 +8,7 @@
 //September 16, 2019
 //This is my own work.
 
-//SOLUTION:
+//SOLUTION: Create 2 threads (one for producer() and consumer()) and then join them so that they may wait for each other to terminate; Make sure to call the producer thread before the consumer thread to allow the producer to produce first before the consumer comes in
 
 //Resources: https://www.geeksforgeeks.org/multithreading-c-2/
 //           https://pubs.opengroup.org/onlinepubs/9699919799/functions/pthread_join.html
